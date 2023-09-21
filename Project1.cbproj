@@ -54,9 +54,9 @@
         <BCC_ExtendedErrorInfo>true</BCC_ExtendedErrorInfo>
         <ILINK_TranslatedLibraryPath>$(BDSLIB)\$(PLATFORM)\release\$(LANGDIR);$(ILINK_TranslatedLibraryPath)</ILINK_TranslatedLibraryPath>
         <ProjectType>CppConsoleApplication</ProjectType>
-        <IncludePath>..\..\..\..\Desktop\;$(IncludePath)</IncludePath>
+        <IncludePath>Q:\Devoir\Modules_CIEL_IR\M01\M01_CodeRaspberry_Etudiants\;..\;..\..\..\..\Desktop\;$(IncludePath)</IncludePath>
         <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;$(DCC_Namespace)</DCC_Namespace>
-        <ILINK_LibraryPath>..\..\..\..\Desktop\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+        <ILINK_LibraryPath>Q:\Devoir\Modules_CIEL_IR\M01\M01_CodeRaspberry_Etudiants\;..\;..\..\..\..\Desktop\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
         <_TCHARMapping>char</_TCHARMapping>
         <SanitizedProjectName>Project1</SanitizedProjectName>
     </PropertyGroup>
@@ -110,6 +110,9 @@
         <BCC_UseClassicCompiler>false</BCC_UseClassicCompiler>
     </PropertyGroup>
     <ItemGroup>
+        <CppCompile Include="..\IRClientUDP.cpp">
+            <BuildOrder>2</BuildOrder>
+        </CppCompile>
         <CppCompile Include="File1.cpp">
             <BuildOrder>1</BuildOrder>
         </CppCompile>
@@ -117,6 +120,10 @@
             <BuildOrder>0</BuildOrder>
             <PCH>true</PCH>
         </PCHCompile>
+        <CppCompile Include="Q:\Devoir\Modules_CIEL_IR\M01\M01_CodeRaspberry_Etudiants\IRClientUDP.cpp">
+            <Suffix>_0</Suffix>
+            <BuildOrder>3</BuildOrder>
+        </CppCompile>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

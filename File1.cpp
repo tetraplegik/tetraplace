@@ -2,6 +2,7 @@
 #include <string>
 #include <math.h>
 #include <fstream>
+#include "IRClientUDP.h"
 using namespace std;
 int main()
 {
@@ -13,8 +14,8 @@ int main()
 	ofstream FichierLog; // création d'un fichier log de la classe ofstream
 	FichierLog.open("journal log");
 
-	while(true)
-	{
+
+
 		cout << "choisir la branche mathematique :"<<endl <<"1)arithmetique (taper 1) :"<<endl <<"2)trigonometrie (taper 2) :";
 		cin >> choix;
 
@@ -69,8 +70,14 @@ int main()
 		cout << val1 << operateur << val2 << "=" << resultat <<  endl;
 
 		cin.get();
-	}
+
 	FichierLog.close();
+
+    IRClientUDP client;
+	client.OuvrirLaSocketDeCommunication("172.20.21.157",4002);
+	std::string msg;
+	client.EnvoyerUnMessage("saint maur");
+	client.FermerLaSocket();
 
 	return 0;
 
